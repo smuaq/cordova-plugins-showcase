@@ -1,7 +1,7 @@
 {
-  "name": "barcodescanner",
+  "name": "Cordova-Plugins-Showcase",
   "version": "1.1.1",
-  "description": "barcodeScanner: An Ionic project",
+  "description": "CPS: A showcase for Cordova based native plugins",
   "dependencies": {
     "gulp": "^3.5.6",
     "gulp-sass": "^2.0.4",
