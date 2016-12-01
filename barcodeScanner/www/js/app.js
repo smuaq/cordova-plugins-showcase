@@ -3,9 +3,9 @@
 // angular.module is a global place for creating, registering and retrieving Angular modules
 // 'starter' is the name of this angular module example (also set in a <body> attribute in index.html)
 // the 2nd parameter is an array of 'requires'
-angular.module('starter', ['ionic'])
+angular.module('starter', ['ionic','starter.controllers'])
 
-.run(function($ionicPlatform,$rootScope) {
+.run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {
     if(window.cordova && window.cordova.plugins.Keyboard) {
       // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
@@ -21,26 +21,35 @@ angular.module('starter', ['ionic'])
       StatusBar.styleDefault();
     }
 
-    $rootScope.scan = function(){
-      cordova.plugins.barcodeScanner.scan(
-        function (result) {
-          alert("Barcode Data:\n" +
-            "Result: " + result.text + "\n" +
-            "Format: " + result.format + "\n" +
-            "Cancelled: " + result.cancelled);
-        },
-        function (error) {
-          alert("Scanning failed: " + error);
-        },
-        {
-          "preferFrontCamera" : false, // iOS and Android
-          "showFlipCameraButton" : true, // iOS and Android
-          "prompt" : "Place a barcode inside the scan area", // supported on Android only
-          "formats" : "QR_CODE,PDF_417", // default: all but PDF_417 and RSS_EXPANDED
-          "orientation" : "landscape" // Android only (portrait|landscape), default unset so it rotates with the device
-        }
-      );
-    }
+  });
+})
+
+.config(function($stateProvider, $urlRouterProvider, $ionicConfigProvider) {
+
+    $ionicConfigProvider.views.maxCache(0);
+    $ionicConfigProvider.views.swipeBackEnabled(false);
+
+    $stateProvider
+      .state('dashboard', {
+        url: '/dashboard',
+        templateUrl: 'templates/dashboard.html',
+        controller: 'dashboard'
+      })
+
+      .state('barcodeScan', {
+        url: '/barcodeScan',
+        templateUrl: 'templates/barcodeScan.html',
+        controller: 'barcodeScan'
+      })
+  
+      .state('toastMessage', {
+        url: '/toastMessage',
+        templateUrl: 'templates/toastMessage.html',
+        controller: 'toastMessage'
+      });
+
+    // if none of the above states are matched, use this as the fallback
+    $urlRouterProvider.otherwise('/dashboard');
 
   });
-});
+

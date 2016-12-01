@@ -19,7 +19,11 @@
       "locator": "https://github.com/phonegap/phonegap-plugin-barcodescanner",
       "id": "phonegap-plugin-barcodescanner"
     },
-    "cordova-plugin-compat"
+    "cordova-plugin-compat",
+    {
+      "locator": "https://github.com/EddyVerbruggen/Toast-PhoneGap-Plugin",
+      "id": "cordova-plugin-x-toast"
+    }
   ],
   "cordovaPlatforms": [
     "ios",
