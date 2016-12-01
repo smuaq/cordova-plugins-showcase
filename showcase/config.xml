@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<widget id="com.ionicframework.barcodescanner867005" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
-  <name>barcodeScanner</name>
+<widget id="com.ionicframework.cordovapluginshowcase867005" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+  <name>Cordova Plugin Showcase</name>
   <description>
-        An Ionic Framework and Cordova project.
+    CPS: A showcase for Cordova based native plugins
     </description>
-  <author email="you@example.com" href="http://example.com.com/">
-      Your Name Here
+  <author email="smuaq@yahoo.com" href="http://smuaq.github.io">
+      Usman Qadri
     </author>
   <content src="index.html"/>
   <access origin="*"/>
