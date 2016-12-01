@@ -1,5 +1,5 @@
-# CordovaBarCodeScanner
-Sample Project for Barcode Scanning
+# Cordova Plugin Showcase
+Showcase for the Cordova Plugins
 
 1- Clone the Repoitory
 2- Use the command to restore application's state:
@@ -10,4 +10,4 @@ ionic state restore
 ```
 ionic build [ios/android] 
 ```
-4- Click the button to scan the barcode
+4- Run & use the desired plugin
