@@ -1,7 +1,8 @@
 # Cordova Plugin Showcase
 Showcase for the Cordova Plugins
 
-1- Clone the Repoitory
+1- Clone the Repository
+
 2- Use the command to restore application's state:
 ```
 ionic state restore 
